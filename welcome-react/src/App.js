@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 function App() {
   return (
-    <div>
-      <h1>welcome React</h1>
-    </div>
+    <Fragment>
+      <h1>Fragment 확인</h1>
+    </Fragment>
   );
 }
 
