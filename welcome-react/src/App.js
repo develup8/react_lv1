@@ -1,8 +1,9 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import './App.css';
 
 function App() {
-  const name = 'react';
-  return <div>{name === 'react' && <h1>hello react</h1>}</div>;
+  const name = undefined;
+  return name || 'undefined 입니다.';
 }
 
 export default App;
