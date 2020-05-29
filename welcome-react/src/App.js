@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react';
 
 function App() {
+  const name = 'react';
   return (
-    <Fragment>
-      <h1>Fragment 확인</h1>
-    </Fragment>
+    <>
+      {name === 'react' ? (<h1>hello react</h1>) : (<h1>not react</h1>)}
+    </>
   );
 }
 
