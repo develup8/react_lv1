@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   const name = undefined;
-  return name || 'undefined 입니다.';
+  return <div>{name || 'undefined 입니다.'}</div>
 }
 
 export default App;
