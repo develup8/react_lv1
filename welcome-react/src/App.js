@@ -5,9 +5,14 @@ function App() {
   const name = 'react';
   return (
     <>
-      <div className="react">{name}</div>
-      <input></input>
-      <input />
+      {/* 주석은 이렇게 작성합니다. */}
+      <div
+        className="react" // 시작 태그를 여러줄로 작성하게 된다면 여기에 주석을 작성할 수 있습니다.
+      >
+        {name}
+      </div>
+      // 하지만 이런 주석이나
+      /* 이런 주석은 페이지에 노출 됩니다. */
     </>
   );
 }
