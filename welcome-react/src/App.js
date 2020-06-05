@@ -5,4 +5,8 @@ const App = () => {
   return <MyComponent />;
 };
 
+MyComponent.defaultProps = {
+  name: "기본 이름",
+};
+
 export default App;
