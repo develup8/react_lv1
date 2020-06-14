@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import Say from "./Say";
+import React from "react";
+import EventPractice from "./EventPractice";
 
 const App = () => {
-  return <Say />;
+  return <EventPractice />;
 };
 
-export default App;
+export default EventPractice;
