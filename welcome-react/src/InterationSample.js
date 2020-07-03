@@ -20,8 +20,16 @@ const InterationSample = () => {
     setNames(nextNames); // names 값을 업데이트 한다
     setInputText(""); // inputText를 비운다
   };
+  const onRemove = (id) => {
+    const nextNames = names.filter((name) => name.id !== id);
+    setNames(nextNames);
+  };
 
-  const namesList = names.map((name) => <li key={name.id}>{name.text}</li>);
+  const namesList = names.map((name) => (
+    <li key={name.id} onDoubleClick={() => onRemove(name.id)}>
+      {name.text}
+    </li>
+  ));
   return (
     <>
       <input value={inputText} onChange={onChange} />
