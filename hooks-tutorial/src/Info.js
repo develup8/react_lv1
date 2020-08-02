@@ -1,42 +1,38 @@
-import React, { useState, useEffect } from 'react';
+import React, { useReducer } from "react";
+
+function reducer(state, action) {
+  return {
+    ...state,
+    [action.name]: action.value,
+  };
+}
 
 const Info = () => {
-    const [name, setName] = useState('');
-    const [nickname, setNickname] = useState('');
+  const [state, dispatch] = useReducer(reducer, {
+    name: "",
+    nickname: "",
+  });
+  const { name, nickname } = state;
+  const onChannge = (e) => {
+    dispatch(e.target);
+  };
 
-    useEffect(() => {
-        console.log('effect');
-        console.log('name: ',name);
-        return () => {
-            console.log('cleanup');
-            console.log('cleanup name: ',name);
-        }
-    });
-
-    const onChanngeName = e => {
-        setName(e.target.value);
-    };
-
-    const onChangeNickname = e => {
-        setNickname(e.target.value);
-    };
-
-    return (
-        <div>
-            <div>
-                <input value={name} onChange={onChanngeName}/>
-                <input value={nickname} onChange={onChangeNickname}/>
-            </div>
-            <div>
-                <p>
-                    <strong>이름 : </strong> {name}
-                </p>
-                <p>
-                    <strong>닉네임 : </strong> {nickname}
-                </p>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div>
+      <div>
+        <input name="name" value={name} onChange={onChannge} />
+        <input name="nickname" value={nickname} onChange={onChannge} />
+      </div>
+      <div>
+        <p>
+          <strong>이름 : </strong> {name}
+        </p>
+        <p>
+          <strong>닉네임 : </strong> {nickname}
+        </p>
+      </div>
+    </div>
+  );
+};
 
 export default Info;
