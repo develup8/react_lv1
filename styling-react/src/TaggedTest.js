@@ -1,12 +1,4 @@
-import React, { Component } from "react";
-
-class TaggedTest extends Component {
-  TaggedTest = () => {
-    function tagged(...args) {
-      console.log(args);
-    }
-    tagged`hello ${{ foo: "bar" }} ${() => "word"}`;
-  };
+function tagged(...args) {
+  console.log(args);
 }
-
-export default TaggedTest;
+tagged`hello ${{ foo: "bar" }} ${() => "word"}`;
