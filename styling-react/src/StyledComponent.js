@@ -43,6 +43,7 @@ const Button = styled.button`
 `;
 
 const StyledComponent = () => (
+  // Box 컴포넌트의 background값에 props를 조회해서 props.color값을 사용하게 설정했다. color값이 없다면 기본값으로 설정한 blue가 렌더링 된다
   <Box color="black">
     <Button>안녕하세요</Button>
     <Button inverted={true}>테두리만</Button>
