@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
+// Line 2: 단순 변수의 형태가 아니라 여러줄의 스타일 구문을 조건부로 설정해야 하는 경우에는 css를 불러와야 한다
 
 const Box = styled.div`
   /* props로 넣어 준 값을 직접 전달해 줄 수 있습니다 */
@@ -47,6 +48,7 @@ const StyledComponent = () => (
   <Box color="black">
     <Button>안녕하세요</Button>
     <Button inverted={true}>테두리만</Button>
+    {/* Line 50: props를 사용하여 서로 다른 스타일 적용 */}
   </Box>
 );
 
